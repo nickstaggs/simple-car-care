@@ -3,6 +3,23 @@ import './App.css';
 
 const logo = require('./logo.svg');
 
+export interface Props {
+  make: Object;
+  enthusiasmLevel?: number;
+}
+
+function SelectCar(object: Props) {
+  const makes = Props.makes;
+  const makesList = makes.map((make) =>
+    <option key={make.id.toString()} value={make.name}>{make.name}</option>
+  );
+  return (
+    <select>
+      {makesList}
+    </select>
+  );
+}
+
 class App extends React.Component {
   render() {
     return (
