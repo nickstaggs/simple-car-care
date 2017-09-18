@@ -3,13 +3,19 @@ import './App.css';
 
 const logo = require('./logo.svg');
 
-export interface Props {
-  make: Object;
-  enthusiasmLevel?: number;
+interface Make {
+  id: number;
+  name: string;
 }
 
-function SelectCar(object: Props) {
-  const makes = Props.makes;
+interface Props {
+  makes: Make[];
+}
+
+let sampleMakes: Make[] = [new Make(1, 'Audi'), new Make(2, 'BMW')];
+
+const SelectCar = (props: Props) => {
+  const makes = props.makes;
   const makesList = makes.map((make) =>
     <option key={make.id.toString()} value={make.name}>{make.name}</option>
   );
@@ -18,7 +24,7 @@ function SelectCar(object: Props) {
       {makesList}
     </select>
   );
-}
+};
 
 class App extends React.Component {
   render() {
@@ -31,6 +37,7 @@ class App extends React.Component {
         <p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <SelectCar makes={sampleMakes} />
       </div>
     );
   }
