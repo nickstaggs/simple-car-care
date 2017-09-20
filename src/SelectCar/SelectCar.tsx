@@ -3,6 +3,7 @@ import { Make } from './Make';
 
 interface Props {
   makes: Make[];
+  className: string;
 }
 
 const SelectCar = (props: Props) => {
@@ -13,7 +14,7 @@ const SelectCar = (props: Props) => {
   );
 
   return (
-    <select>
+    <select className={props.className}>
       {makesList}
     </select>
   );
