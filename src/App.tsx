@@ -1,30 +1,11 @@
 import * as React from 'react';
 import './App.css';
+import SelectCar from './SelectCar/SelectCar';
+import { Make } from './SelectCar/Make';
 
 const logo = require('./logo.svg');
 
-interface Make {
-  id: number;
-  name: string;
-}
-
-interface Props {
-  makes: Make[];
-}
-
-let sampleMakes: Make[] = [new Make(1, 'Audi'), new Make(2, 'BMW')];
-
-const SelectCar = (props: Props) => {
-  const makes = props.makes;
-  const makesList = makes.map((make) =>
-    <option key={make.id.toString()} value={make.name}>{make.name}</option>
-  );
-  return (
-    <select>
-      {makesList}
-    </select>
-  );
-};
+let sampleMakes: Make[] = [{id: 1, name: 'Audi'}, {id: 2, name: 'BMW'}];
 
 class App extends React.Component {
   render() {
