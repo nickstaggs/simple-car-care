@@ -1,13 +1,23 @@
 import * as React from 'react';
-import './App.css';
+import { blueGrey, lime } from 'material-ui/colors';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import createMuiTheme from 'material-ui/styles/createMuiTheme';
+import createPalette from 'material-ui/styles/createPalette';
 import NavBar from './NavBar';
+
+const muiTheme = createMuiTheme({
+  palette: createPalette({
+    primary: blueGrey,
+    secondary: lime,
+  })
+});
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
+      <MuiThemeProvider muiTheme={muiTheme}>
         <NavBar />
-      </div>
+      </MuiThemeProvider>
     );
   }
 }
