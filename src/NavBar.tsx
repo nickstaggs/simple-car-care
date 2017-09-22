@@ -5,9 +5,10 @@ import { Make } from './SelectCar/Make';
 import  withStyles from 'material-ui/styles/withStyles';
 // import { StyleRules } from 'material-ui/styles/withStyles';
 // import withTheme from 'material-ui/styles/withTheme';
-// import Paper from 'material-ui/Paper';
+import Paper from 'material-ui/Paper';
+import { Theme } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
-import { Theme } from 'material-ui/styles/createMuiTheme';
+import { createMuiTheme } from 'material-ui/styles';
 
 const styles = (theme: Theme) => ({
   root: {
@@ -16,32 +17,38 @@ const styles = (theme: Theme) => ({
     backgroundColor: theme.palette.primary,
   },
   paper: {
+    flexGrow: 1,
     padding: 16,
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
+  logo: {
+    flexGrow: 1,
+    padding: 16,
+    textAlign: 'left',
+    color: theme.palette.text.secondary,
+  },
 });
+
+let myTheme: Theme = createMuiTheme();
 
 let sampleMakes: Make[] = [{id: 0, name: 'Select Make'}, {id: 1, name: 'Audi'}, {id: 2, name: 'BMW'}];
 
-function NavBar(props: any) {
-  const classes = props.classes;
-  return (
-    <div className={classes.root}>
-      <Grid container={true} spacing={24} classes={classes.root} >
+let NavBar = (props: any) => (
+  <Grid container={true} spacing={24}>
+    <Paper className={props.classes.paper}>
+      <Grid container={true} spacing={24}>
         <Grid item={true} xs={6}>
-          <h1>Simple Car Care</h1>
+          <Paper className={props.classes.logo}>
+            <h1>Simple Car Care</h1>
+          </Paper>
         </Grid>
         <Grid item={true} xs={6}>
           <SelectCar makes={sampleMakes} className="Select-car"  />
         </Grid>
       </Grid>
-    </div>
-  );
-}
+    </Paper>
+  </Grid>
+);
 
-// NavBar.propTypes = {
-//   classes: PropTypes.object.isRequired,
-// };
-
-export default withStyles(styles)(NavBar);
+export default withStyles(styles(myTheme))(NavBar);

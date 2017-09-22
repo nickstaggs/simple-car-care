@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+    "typeRoots": [
+       "node_modules/@types",
+        "node_modules"
+    ],
+    "types": [
+        "node", "jest", "react",
+        "react-dom", "material-ui"
+    ],
     "outDir": "build/dist",
     "module": "esnext",
     "target": "es5",
@@ -17,6 +25,11 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true
   },
+  "include": [
+    "src",
+    "node_modules/**/*.d.ts",
+    "node_modules/@types/**/*.d.ts"
+  ],
   "exclude": [
     "node_modules",
     "build",
