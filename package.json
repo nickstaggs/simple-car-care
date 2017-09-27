@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/classnames": "^2.2.3",
     "@types/jest": "^20.0.8",
     "@types/node": "^8.0.26",
     "@types/prop-types": "^15.5.1",
