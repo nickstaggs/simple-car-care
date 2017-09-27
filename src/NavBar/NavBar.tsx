@@ -12,6 +12,7 @@ let styles = (theme: Object) => ({
       width: '100%',
       marginTop: 0,
       backgroundColor: AppTheme.palette.primary[500],
+      flex: '0 1 auto'
     },
     flex: {
       flex: 1,

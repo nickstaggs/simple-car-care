@@ -12,10 +12,9 @@ let styles: StyleRules = {
       display: 'flex'
     },
     paper: {
-      flexGrow: 1,
-      flexShrink: 1,
-      flexBasis: 'auto',
-      margin: '.5em',
+      flex: '1 1 auto',
+      // flexDirection: 'column',
+      overflow: 'auto'
     },
 };
 
@@ -23,10 +22,7 @@ function MainScreen(props: any) {
   const classes = props.classes;
 
   return (
-    <div className={classes.root}>
-      <Paper className={classes.paper}>
-      </Paper>
-    </div>
+      <Paper className={classes.paper}/>
   );
 }
 
