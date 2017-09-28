@@ -26,7 +26,7 @@ function NavBar(props: any) {
   const classes = props.classes;
   return (
     <div className={classes.root}>
-      <AppBar position="static" color={classes.root.backgroundColor}>
+      <AppBar position="static" className={classes.root}>
         <Toolbar>
           <Typography type="title" color="inherit" className={classes.flex}>
             Simple Car Care
