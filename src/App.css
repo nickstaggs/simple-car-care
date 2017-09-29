@@ -4,12 +4,24 @@
 
 html,
 body {
-  height: 98%;
-  /*margin: 0;*/
+  display: flex;
+  flex: 1 1 auto;
+  height: 100vh;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex: 1 1 auto;
+  margin: .5em;
 }
 
 .App {
   display: flex;
+  flex: 1 1 auto;
   flex-flow: column;
-  height: auto;
+}
+
+.no-margin {
+  margin: 0;
 }
