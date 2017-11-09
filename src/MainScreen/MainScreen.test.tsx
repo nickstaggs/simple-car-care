@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import NavBar from './NavBar';
+import MainScreen from './MainScreen';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<NavBar />, div);
+  ReactDOM.render(<MainScreen />, div);
 });

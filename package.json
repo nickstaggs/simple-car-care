@@ -9,10 +9,12 @@
     "@types/prop-types": "^15.5.1",
     "@types/react": "^16.0.7",
     "@types/react-dom": "^15.5.5",
+    "@types/react-router-dom": "^4.2.1",
     "material-ui": "1.0.0-beta.12",
     "prop-types": "^15.5.10",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
+    "react-router-dom": "^4.2.2",
     "react-scripts-ts": "2.7.0"
   },
   "scripts": {
@@ -25,6 +27,8 @@
     "jest-cli": "^21.2.1"
   },
   "jest": {
-    "testMatch": ["/src/**/?.test.tsx"]
+    "testMatch": [
+      "/src/**/?.test.tsx"
+    ]
   }
 }

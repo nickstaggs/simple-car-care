@@ -6,8 +6,9 @@ import  withStyles from 'material-ui/styles/withStyles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
+import { StyleRules } from 'material-ui/styles';
 
-let styles = (theme: Object) => ({
+let styles: StyleRules = {
     root: {
       width: '100%',
       marginTop: 0,
@@ -17,7 +18,7 @@ let styles = (theme: Object) => ({
     flex: {
       flex: 1,
     },
-});
+};
 
 let sampleMakes: Make[] = [{id: 0, name: 'Select Make'}, {id: 1, name: 'Audi'}, {id: 2, name: 'BMW'}];
 
@@ -38,4 +39,4 @@ function NavBar(props: any) {
   );
 }
 
-export default withStyles(styles, AppTheme)(NavBar);
+export default withStyles(styles)(NavBar);

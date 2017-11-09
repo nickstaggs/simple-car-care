@@ -1,33 +1,16 @@
 import * as React from 'react';
+import { StyleRules } from 'material-ui/styles';
 import  withStyles from 'material-ui/styles/withStyles';
 import { Paper, Grid } from 'material-ui';
-import { StyleRules } from 'material-ui/styles';
 
 let styles: StyleRules = {
     root: {
       display: 'flex',
       flex: '1 1 auto',
-      marginTop: '.5em',
-      overflow: 'hidden',
-      background: 'url(https://goo.gl/QRxgd1) 50% 50%'
-    },
-    img : {
-      maxWidth: '100%',
-      zIndex: -1
-    },
-    whiteOverlay: {
-      zIndex: 1,
-      display: 'flex',
-      flex: '1 1 auto',
-      backgroundColor: 'rgba(0, 0, 0, 0.5)'
-    },
-    paper: {
-      zIndex: 2,
-      textAlign: 'center'
-    },
+    }
 };
 
-const MainScreen = (props: any) => {
+const Make = (props: any) => {
   let classes = props.classes;
   return (
     <Paper className={classes.root} elevation={5}>
@@ -48,4 +31,4 @@ const MainScreen = (props: any) => {
   );
 };
 
-export default withStyles(styles)(MainScreen);
+export default withStyles(styles)(Make);
